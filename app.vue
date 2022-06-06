@@ -1,4 +1,5 @@
 <template>
+  <title>Simulasi Biaya Balik Nama</title>
   <i-layout>
     <i-layout-header
       ><i-navbar>
@@ -12,7 +13,18 @@
           <i-input disabled placeholder="Ketik untuk mencari di sini...">
             <template #append>
               <i-button color="primary">
-                <i-icon name="ink-search" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
               </i-button>
             </template>
           </i-input>
