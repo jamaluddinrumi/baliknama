@@ -12,7 +12,7 @@
             <i-nav-item disabled to="/about"> Tentang Kami </i-nav-item>
             <i-nav-item disabled to="/contact"> Kontak </i-nav-item>
           </i-nav>
-          <div class="mt-4 text-slate-400 text-center">
+          <div class="mt-2 text-sm text-slate-400 text-center">
             dibuat oleh Jamaluddin Rumi
           </div>
         </i-navbar-collapsible>
