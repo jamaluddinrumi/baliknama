@@ -1,10 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxi build",
-    "dev": "nuxi dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
-    "generate": "nuxi generate",
-    "preview": "nuxi preview"
+    "build": "nuxt build",
+    "dev": "nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^5.1.2",
