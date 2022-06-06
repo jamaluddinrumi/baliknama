@@ -3,7 +3,9 @@
   <i-layout>
     <i-layout-header
       ><i-navbar>
-        <i-navbar-brand to="/"> Simulasi Biaya Balik Nama </i-navbar-brand>
+        <i-navbar-brand to="/">
+          <span class="font-bold">Hitung Biaya Balik Nama</span>
+        </i-navbar-brand>
         <i-navbar-collapsible>
           <i-nav>
             <i-nav-item disabled to="/"> Halaman Depan </i-nav-item>
