@@ -1,23 +1,26 @@
 <template>
-  <i-input
-    v-model="hargaBeli"
-    placeholder="Ketikkan Harga Beli Mobil Anda..."
-  />
-  <i-table border class="mt-4">
-    <thead>
-      <tr>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
+  <i-number-input
+    v-model.number="hargaBeli"
+    placeholder="Harga Beli..."
+    clearable
+    :step="1000000"
+    size="lg"
+  >
+    <template #prefix>Rp</template>
+  </i-number-input>
+  <i-table border hover class="mt-4">
     <tbody class="text-sm">
       <tr>
         <th scope="row">Bea balik nama mobil</th>
-        <td class="text-right">Rp0</td>
+        <td class="text-right">
+          Rp{{ beaBalikNamaMobil.toLocaleString("id-ID") }}
+        </td>
       </tr>
       <tr>
         <th scope="row">Pajak kendaraan bermotor</th>
-        <td class="text-right">Rp0</td>
+        <td class="text-right">
+          Rp{{ pajakKendaraanBermotor.toLocaleString("id-ID") }}
+        </td>
       </tr>
       <tr>
         <th scope="row">SWDKLLJ</th>
@@ -52,8 +55,8 @@
         </td>
       </tr>
       <tr>
-        <th scope="row">Total Biaya</th>
-        <td class="text-right">
+        <th class="bg-black text-white" scope="row">Total Biaya</th>
+        <td class="bg-black text-white text-right">
           <span class="font-bold"
             >Rp{{ totalBiaya.toLocaleString("id-ID") }}</span
           >
@@ -64,12 +67,55 @@
 </template>
 
 <script setup>
-const hargaBeli = ref(null);
+const hargaBeli = ref(0);
+const beaBalikNamaMobil = computed(() => {
+  return (1 / 100) * hargaBeli.value;
+});
+const pajakKendaraanBermotor = computed(() => {
+  return (2 / 100) * hargaBeli.value;
+});
 const swdkllj = ref(143000);
 const biayaAdministrasiStnk = ref(50000);
 const biayaPenerbitanStnk = ref(200000);
 const penerbitanBpkb = ref(350000);
 const pendaftaran = ref(100000);
 const penerbitanTnkb = ref(100000);
-const totalBiaya = ref(0);
+const totalBiaya = computed({
+  get() {
+    return (
+      beaBalikNamaMobil.value +
+      pajakKendaraanBermotor.value +
+      swdkllj.value +
+      biayaAdministrasiStnk.value +
+      biayaPenerbitanStnk.value +
+      penerbitanBpkb.value +
+      pendaftaran.value +
+      penerbitanTnkb.value
+    );
+  },
+  set(newValue) {
+    totalBiaya.value = newValue;
+  },
+});
+
+// function hitungTotalBiaya() {
+//   beaBalikNamaMobil.value = 1 % hargaBeli;
+//   pajakKendaraanBermotor.value = 2 % hargaBeli.value;
+//   totalBiaya.value =
+//     beaBalikNamaMobil.value +
+//     pajakKendaraanBermotor.value +
+//     swdkllj.value +
+//     biayaAdministrasiStnk.value +
+//     biayaPenerbitanStnk.value +
+//     penerbitanBpkb.value +
+//     pendaftaran.value +
+//     penerbitanTnkb.value;
+// }
 </script>
+
+<style>
+.input-wrapper .input-prepend,
+.input-wrapper .input-append {
+  display: none;
+}
+</style>
