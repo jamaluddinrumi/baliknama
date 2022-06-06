@@ -6,4 +6,7 @@ export default defineNuxtConfig({
   inkline: {
     // Plugin options (optional)
   },
+  tailwindcss: {
+    viewer: false,
+  },
 });
