@@ -1,5 +1,4 @@
 <template>
-  <title>Simulasi Biaya Balik Nama</title>
   <i-number-input
     v-model.number="hargaBeli"
     placeholder="Ketik harga belinya..."

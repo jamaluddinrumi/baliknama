@@ -1,4 +1,5 @@
 <template>
+  <title>Simulasi Biaya Balik Nama</title>
   <i-layout>
     <i-layout-header
       ><i-navbar>
