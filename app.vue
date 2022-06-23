@@ -1,5 +1,7 @@
 <template>
-  <title>Simulasi Biaya Balik Nama</title>
+  <Head>
+    <Title>Simulasi Biaya Balik Nama</Title>
+  </Head>
   <i-layout>
     <i-layout-header
       ><i-navbar>
@@ -22,8 +24,6 @@
     <i-layout-footer class="text-center text-slate-400/75"></i-layout-footer>
   </i-layout>
 </template>
-
-<script setup></script>
 
 <style lang="scss">
 @import "@inkline/inkline/css/variables";
