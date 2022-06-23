@@ -1,5 +1,4 @@
 <template>
-  <title>Simulasi Biaya Balik Nama</title>
   <i-layout>
     <i-layout-header
       ><i-navbar>
@@ -23,9 +22,12 @@
   </i-layout>
 </template>
 
+<script setup></script>
+
 <style lang="scss">
 @import "@inkline/inkline/css/variables";
 @import "@inkline/inkline/css/mixins";
+@import "@inkline/inkline/inkline";
 
 :root {
   --color--primary--h: 195deg;
