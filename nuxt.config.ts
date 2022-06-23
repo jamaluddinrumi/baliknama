@@ -9,4 +9,7 @@ export default defineNuxtConfig({
   tailwindcss: {
     viewer: false,
   },
+  build: {
+    transpile: ["@inkline/inkline"],
+  },
 });
