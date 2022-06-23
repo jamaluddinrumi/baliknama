@@ -1,14 +1,14 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev --http --ssl-cert localhost.pem --ssl-key localhost-key.pem",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "build": "nuxi build",
+    "dev": "nuxi dev --http --ssl-cert localhost.pem --ssl-key localhost-key.pem",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^5.1.2",
-    "nuxt": "3.0.0-rc.3",
+    "nuxt": "^3.0.0-rc.4",
     "sass": "^1.52.2"
   },
   "dependencies": {
