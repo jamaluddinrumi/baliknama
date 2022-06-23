@@ -1,7 +1,8 @@
 <template>
+  <title>Simulasi Biaya Balik Nama</title>
   <i-number-input
     v-model.number="hargaBeli"
-    placeholder="Harga Beli..."
+    placeholder="Ketik harga belinya..."
     clearable
     :step="1000000"
     size="lg"
@@ -66,7 +67,7 @@
   </i-table>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const hargaBeli = ref(0);
 const beaBalikNamaMobil = computed(() => {
   return (1 / 100) * hargaBeli.value;
@@ -82,6 +83,9 @@ const pendaftaran = ref(100000);
 const penerbitanTnkb = ref(100000);
 const totalBiaya = computed({
   get() {
+    if (hargaBeli.value === 0 || hargaBeli.value === "") {
+      return 0;
+    }
     return (
       beaBalikNamaMobil.value +
       pajakKendaraanBermotor.value +
@@ -97,6 +101,31 @@ const totalBiaya = computed({
     totalBiaya.value = newValue;
   },
 });
+const currency = "IDR"; // https://www.currency-iso.org/dam/downloads/lists/list_one.xml
+const options = {
+  maximumFractionDigits: 2,
+  currency: currency,
+  style: "currency",
+  currencyDisplay: "symbol",
+};
+
+function localStringToNumber(s) {
+  return Number(String(s).replace(/[^0-9.-]+/g, ""));
+}
+
+function onFocus(e) {
+  var value = e.target.value;
+  e.target.value = value ? localStringToNumber(value) : "";
+}
+
+function onBlur(e) {
+  var value = e.target.value;
+
+  e.target.value =
+    value || value === 0
+      ? localStringToNumber(value).toLocaleString(undefined, options)
+      : "";
+}
 
 // function hitungTotalBiaya() {
 //   beaBalikNamaMobil.value = 1 % hargaBeli;
@@ -117,5 +146,11 @@ const totalBiaya = computed({
 .input-wrapper .input-prepend,
 .input-wrapper .input-append {
   display: none;
+}
+
+.input-wrapper .input .input-prefix,
+.input-wrapper .input .input-suffix {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 </style>
