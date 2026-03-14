@@ -1,71 +1,3 @@
-<template>
-  <i-number-input
-    v-model.number="hargaBeli"
-    placeholder="Ketik harga belinya..."
-    clearable
-    :step="1000000"
-    size="lg"
-  >
-    <template #prefix>Rp</template>
-  </i-number-input>
-  <i-table border hover class="mt-4">
-    <tbody class="text-sm">
-      <tr class="opacity-75">
-        <th scope="row">Bea balik nama mobil</th>
-        <td class="text-right">
-          Rp{{ beaBalikNamaMobil.toLocaleString("id-ID") }}
-        </td>
-      </tr>
-      <tr class="opacity-75">
-        <th scope="row">Pajak kendaraan bermotor</th>
-        <td class="text-right">
-          Rp{{ pajakKendaraanBermotor.toLocaleString("id-ID") }}
-        </td>
-      </tr>
-      <tr class="opacity-75">
-        <th scope="row">SWDKLLJ</th>
-        <td class="text-right">Rp{{ swdkllj.toLocaleString("id-ID") }}</td>
-      </tr>
-      <tr class="opacity-75">
-        <th scope="row">Biaya administrasi STNK</th>
-        <td class="text-right">
-          Rp{{ biayaAdministrasiStnk.toLocaleString("id-ID") }}
-        </td>
-      </tr>
-      <tr class="opacity-75">
-        <th scope="row">Biaya penerbitan STNK</th>
-        <td class="text-right">
-          Rp{{ biayaPenerbitanStnk.toLocaleString("id-ID") }}
-        </td>
-      </tr>
-      <tr class="opacity-75">
-        <th scope="row">Penerbitan BPKB</th>
-        <td class="text-right">
-          Rp{{ penerbitanBpkb.toLocaleString("id-ID") }}
-        </td>
-      </tr>
-      <tr class="opacity-75">
-        <th scope="row">Pendaftaran</th>
-        <td class="text-right">Rp{{ pendaftaran.toLocaleString("id-ID") }}</td>
-      </tr>
-      <tr class="opacity-75">
-        <th scope="row">Penerbitan TNKB</th>
-        <td class="text-right">
-          Rp{{ penerbitanTnkb.toLocaleString("id-ID") }}
-        </td>
-      </tr>
-      <tr>
-        <th class="bg-black text-white" scope="row">Total Biaya</th>
-        <td class="bg-black text-white text-right">
-          <span class="font-bold"
-            >Rp{{ totalBiaya.toLocaleString("id-ID") }}</span
-          >
-        </td>
-      </tr>
-    </tbody>
-  </i-table>
-</template>
-
 <script setup lang="ts">
 const hargaBeli = ref(0);
 const beaBalikNamaMobil = computed(() => {
@@ -140,6 +72,74 @@ function onBlur(e) {
 //     penerbitanTnkb.value;
 // }
 </script>
+
+<template>
+  <i-number-input
+    v-model.number="hargaBeli"
+    placeholder="Ketik harga belinya..."
+    clearable
+    :step="1000000"
+    size="lg"
+  >
+    <template #prefix>Rp</template>
+  </i-number-input>
+  <i-table border hover class="mt-4">
+    <tbody class="text-sm">
+      <tr class="opacity-75">
+        <th scope="row">Bea balik nama mobil</th>
+        <td class="text-right">
+          Rp{{ beaBalikNamaMobil.toLocaleString("id-ID") }}
+        </td>
+      </tr>
+      <tr class="opacity-75">
+        <th scope="row">Pajak kendaraan bermotor</th>
+        <td class="text-right">
+          Rp{{ pajakKendaraanBermotor.toLocaleString("id-ID") }}
+        </td>
+      </tr>
+      <tr class="opacity-75">
+        <th scope="row">SWDKLLJ</th>
+        <td class="text-right">Rp{{ swdkllj.toLocaleString("id-ID") }}</td>
+      </tr>
+      <tr class="opacity-75">
+        <th scope="row">Biaya administrasi STNK</th>
+        <td class="text-right">
+          Rp{{ biayaAdministrasiStnk.toLocaleString("id-ID") }}
+        </td>
+      </tr>
+      <tr class="opacity-75">
+        <th scope="row">Biaya penerbitan STNK</th>
+        <td class="text-right">
+          Rp{{ biayaPenerbitanStnk.toLocaleString("id-ID") }}
+        </td>
+      </tr>
+      <tr class="opacity-75">
+        <th scope="row">Penerbitan BPKB</th>
+        <td class="text-right">
+          Rp{{ penerbitanBpkb.toLocaleString("id-ID") }}
+        </td>
+      </tr>
+      <tr class="opacity-75">
+        <th scope="row">Pendaftaran</th>
+        <td class="text-right">Rp{{ pendaftaran.toLocaleString("id-ID") }}</td>
+      </tr>
+      <tr class="opacity-75">
+        <th scope="row">Penerbitan TNKB</th>
+        <td class="text-right">
+          Rp{{ penerbitanTnkb.toLocaleString("id-ID") }}
+        </td>
+      </tr>
+      <tr>
+        <th class="bg-black text-white" scope="row">Total Biaya</th>
+        <td class="bg-black text-white text-right">
+          <span class="font-bold"
+            >Rp{{ totalBiaya.toLocaleString("id-ID") }}</span
+          >
+        </td>
+      </tr>
+    </tbody>
+  </i-table>
+</template>
 
 <style>
 .input-wrapper .input-prepend,
