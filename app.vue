@@ -27,7 +27,7 @@
           <span class="font-bold">Mau sukses mempromosikan produk anda di <span class="italic">event offline</span>?</span>
         </template>
         <p><a href="https://www.indomascot.com/" class="text-blue-500" target="_blank">Kostum Badut</a> Custom dengan desain dari anda sendiri bisa jadi jawabannya.</p>
-        <p class="mt-1">Kunjungi www.indomascot.com untuk info lebih lanjut.</p>
+        <p class="mt-1">Kunjungi <span class="font-semibold">www.indomascot.com</span> untuk info lebih lanjut.</p>
       </i-card>
       <br>
       <p class="text-sm"><span class="font-bold">Disclaimer:</span> Data di website ini bisa jadi sudah <span class="italic">out of date</span>.</p>
