@@ -21,7 +21,11 @@
       </i-navbar></i-layout-header
     >
     <i-layout-content class="p-4"><SimpleTable></SimpleTable></i-layout-content>
-    <i-layout-footer class="text-center text-slate-400/75"></i-layout-footer>
+    <i-layout-footer class="text-center text-slate-400/75">
+      <p>Mau sukses mempromosikan produk anda di event offline? <a href="https://www.indomascot.com/" class="text-blue-500" target="_blank">Kostum Badut</a> Custom dengan desain dari anda sendiri bisa jadi jawabannya.</p>
+      <br>
+      <p>Kunjungi www.indomascot.com untuk info lebih lanjut.</p>
+    </i-layout-footer>
   </i-layout>
 </template>
 
