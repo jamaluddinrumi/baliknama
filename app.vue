@@ -22,11 +22,16 @@
     >
     <i-layout-content class="p-4"><SimpleTable></SimpleTable></i-layout-content>
     <i-layout-footer class="text-center text-slate-400/75">
-      <p>Data di website ini bisa jadi sudah <span class="italic">out of date</span>.</p>
+      <i-card>
+        <template #header>
+          <span class="font-bold">Mau sukses mempromosikan produk anda di <span class="italic">event offline</span>?</span>
+        </template>
+        <p><a href="https://www.indomascot.com/" class="text-blue-500" target="_blank">Kostum Badut</a> Custom dengan desain dari anda sendiri bisa jadi jawabannya.</p>
+        <br>
+        <p>Kunjungi www.indomascot.com untuk info lebih lanjut.</p>
+      </i-card>
       <br>
-      <p>Mau sukses mempromosikan produk anda di <span class="italic">event offline</span>? <a href="https://www.indomascot.com/" class="text-blue-500" target="_blank">Kostum Badut</a> Custom dengan desain dari anda sendiri bisa jadi jawabannya.</p>
-      <br>
-      <p>Kunjungi www.indomascot.com untuk info lebih lanjut.</p>
+      <p class="text-sm"><span class="font-bold">Disclaimer:</span> Data di website ini bisa jadi sudah <span class="italic">out of date</span>.</p>
       <br>
     </i-layout-footer>
   </i-layout>
