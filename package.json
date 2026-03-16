@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "1",
+  "version": "1.0.1",
   "scripts": {
     "build": "nuxi build",
     "dev": "nuxi dev --http --ssl-cert localhost.pem --ssl-key localhost-key.pem",
